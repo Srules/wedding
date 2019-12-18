@@ -157,9 +157,9 @@ GEM
       sprockets-rails
       tilt
     sexp_processor (4.13.0)
-    simple_form (4.0.0)
-      actionpack (> 4)
-      activemodel (> 4)
+    simple_form (5.0.1)
+      actionpack (>= 5.0)
+      activemodel (>= 5.0)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -207,7 +207,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.7)
   sass-rails (~> 5.0)
-  simple_form
+  simple_form (>= 5.0.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
@@ -216,4 +216,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.17.2
+   1.17.3
