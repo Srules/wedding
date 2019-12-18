@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.5'
 gem "haml-rails", "~> 2.0"
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
-gem 'simple_form'
+gem "simple_form", ">= 5.0.0"
 
 
 group :development, :test do

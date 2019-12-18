@@ -12,3 +12,11 @@
  *
  */
 @import "bootstrap";
+
+.scrollable {
+  max-height: 50vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}

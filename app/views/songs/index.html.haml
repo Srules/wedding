@@ -5,7 +5,11 @@
 %p
   =render partial: 'form', locals: { song: Song.new }
 
-.list-group
-  =render @songs.order(votes: :desc, title: :asc)
+.test
+  = youtube_video @songs.first.url
+
+.scrollable
+  .list-group
+    =render @songs.order(votes: :desc, title: :asc)
 
 
