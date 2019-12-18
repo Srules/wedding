@@ -8,9 +8,9 @@
         - song.errors.full_messages.each do |message|
           %li= message
 
-  = form.input :title
-  = form.input :artist
-  = form.input :url
-  = form.input :suggested_by
+  = form.input :title, label_html: { class: 'mx-2' }
+  = form.input :artist, label_html: { class: 'mx-2' }
+  = form.input :url, placeholder: 'youtube.com...', label_html: { class: 'mx-2' }
+  = form.input :suggested_by, label_html: { class: 'mx-2' }
 
-  = form.submit
+  = form.button :submit, 'Add Song', class: 'btn btn-primary mx-2'

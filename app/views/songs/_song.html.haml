@@ -1,13 +1,17 @@
-.m-3
-  %a.list-group-item.list-group-item-action.flex-column.align-items-start{:href => song.url}
-    .d-flex.w-100.justify-content-between
-      %h5.mb-1= song.title
-      %h5.badge.badge-primary.badge-pill= song.votes
-    .d-flex.w-100.justify-content-between
-      %p.mb-1= song.artist
-    %small="Suggested by #{song.suggested_by}"
+.row
+  .col-md-6
+    .m-3.w-100
+      %a.list-group-item.list-group-item-action.flex-column.align-items-start{:href => song.url, target: "_blank"}
+        .d-flex.w-100.justify-content-between
+          %h5.mb-1= song.title
+          %h5.badge.badge-primary.badge-pill= song.votes
+        .d-flex.w-100.justify-content-between
+          %p.mb-1= song.artist
+        %small="Suggested by #{song.suggested_by}"
 
-  .d-flex.w-100.justify-content-between
-    = link_to 'Upvote', upvote_path(id: song.id), method: :post
-    = link_to 'Downvote', upvote_path(id: song.id), method: :delete, data: { confirm: 'Are you sure?' }
+      .d-flex.w-100.justify-content-between
+        = link_to 'Upvote', upvote_path(id: song.id), method: :post
+        = link_to 'Downvote', upvote_path(id: song.id), method: :delete, data: { confirm: 'Are you sure?' }
+  .col-md-6
+    = youtube_video song.url
 
