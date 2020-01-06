@@ -8,7 +8,7 @@
     %small="Suggested by #{song.suggested_by}"
 
   .d-flex.w-100.justify-content-between
-    = link_to 'Upvote', upvote_path(id: song.id), method: :post
-    = link_to 'Downvote', upvote_path(id: song.id), method: :delete, data: { confirm: 'Are you sure?' }
+    = link_to 'Upvote', upvote_path(id: song.id), method: :post, class: 'btn btn-primary'
+    = link_to 'Downvote', upvote_path(id: song.id), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger'
 
     = button_tag 'Play', type: 'button', onclick: "swapYoutube(\'#{song.url}\')", class: 'btn btn-secondary'
